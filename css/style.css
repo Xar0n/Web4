@@ -45,6 +45,27 @@
 }
 
 
+.pagination{
+  margin-bottom: 64px;
+}
+
+.block {
+  background:#DEE2E6; 
+  text-align:center; 
+  margin-top: 64px;
+  margin-bottom: 64px;
+  margin-left: 10px;
+  margin-rigt: 10px;
+}
+
+.block-title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 24px;
+}
+
 .img2 {
 	height: auto;
 	max-width: 60%;
@@ -81,10 +102,12 @@ a{
   text-decoration: none;
 }
 
-.product-author2 {
-	margin-top: 10px;
-  max-height: auto;
-	padding: 0px 10px;
+.product-author {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 19px;
   overflow: hidden;
 }
 .product-price2 {
@@ -104,4 +127,5 @@ a{
   font-weight: 600;
   font-size: 20px;
   line-height: 19px;
+  padding: 10px 16px;
 }
