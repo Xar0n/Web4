@@ -26,7 +26,7 @@
 	<!-- Выпадающее меню и кнопки навигации -->
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item"><a class="navbar-brand" href="#">Книги №1</a></li>
+        <li class="nav-item"><a class="navbar-brand" href="/">Книги №1</a></li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown06" data-bs-toggle="dropdown" aria-expanded="false">Категории</a>
             <ul class="dropdown-menu" aria-labelledby="dropdown06">
@@ -44,7 +44,7 @@
             </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="series.html">Серии</a>
+          <a class="nav-link" aria-current="page" href="/series.html">Серии</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#modalOrder">Статус заказа</a>
@@ -57,6 +57,7 @@
             <svg class="bi d-block mx-auto mb-1" width="43" height="43" xmlns="http://www.w3.org/2000/svg" fill="#0D6EFD" class="bi bi-basket3-fill" viewBox="0 0 16 16">
     <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.468 15.426.943 9h14.114l-1.525 6.426a.75.75 0 0 1-.729.574H3.197a.75.75 0 0 1-.73-.574z"/></svg>
           </a>
+          <div id="enscart_my_counter_wrapper"><span  id="easynetshop-cart-count"> 0 </span></div>
         </li>
       </ul>
 	<!--  -->
@@ -104,7 +105,7 @@
 	<!-- ОСНОВАНЯ ЧАСТЬ -->
 <main class="flex-md-shrink-0" >
     <div class="col-md-12 block"> <!--style="background:#DEE2E6; text-align:center; margin-top: 30px;">-->
-    <p class="block-title">Новинки</p>
+    <p class="block-title">Популярное</p>
     <div class="row justify-content-md-center">
         <!-- <div class="col-md-1" ></div>  -->
             <div class="col-md-2">
@@ -121,7 +122,7 @@
                 <div class="col">
                 <p class="product-price2">800 ₽</p>
                 </div>
-                <div class="col">
+                <div class="col add-to-cart">
 				<button type="button" class="btn btn-primary button-buy">В корзину</button>
                 </div>
             </div>
@@ -369,7 +370,7 @@
         </div>
 
         <!-- Modal cart -->
-        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header border-bottom-0">
@@ -390,7 +391,147 @@
               <th scope="col">Действия</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="product-list">
+            <tr>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Vans Sk8-Hi MTE Shoes</td>
+              <td>89$</td>
+              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
+              <td>178$</td>
+              <td>
+                <a href="#" class="btn btn-danger btn-sm">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Vans Sk8-Hi MTE Shoes</td>
+              <td>89$</td>
+              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
+              <td>178$</td>
+              <td>
+                <a href="#" class="btn btn-danger btn-sm">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Vans Sk8-Hi MTE Shoes</td>
+              <td>89$</td>
+              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
+              <td>178$</td>
+              <td>
+                <a href="#" class="btn btn-danger btn-sm">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Vans Sk8-Hi MTE Shoes</td>
+              <td>89$</td>
+              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
+              <td>178$</td>
+              <td>
+                <a href="#" class="btn btn-danger btn-sm">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Vans Sk8-Hi MTE Shoes</td>
+              <td>89$</td>
+              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
+              <td>178$</td>
+              <td>
+                <a href="#" class="btn btn-danger btn-sm">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Vans Sk8-Hi MTE Shoes</td>
+              <td>89$</td>
+              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
+              <td>178$</td>
+              <td>
+                <a href="#" class="btn btn-danger btn-sm">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Vans Sk8-Hi MTE Shoes</td>
+              <td>89$</td>
+              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
+              <td>178$</td>
+              <td>
+                <a href="#" class="btn btn-danger btn-sm">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Vans Sk8-Hi MTE Shoes</td>
+              <td>89$</td>
+              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
+              <td>178$</td>
+              <td>
+                <a href="#" class="btn btn-danger btn-sm">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Vans Sk8-Hi MTE Shoes</td>
+              <td>89$</td>
+              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
+              <td>178$</td>
+              <td>
+                <a href="#" class="btn btn-danger btn-sm">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Vans Sk8-Hi MTE Shoes</td>
+              <td>89$</td>
+              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
+              <td>178$</td>
+              <td>
+                <a href="#" class="btn btn-danger btn-sm">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr>
             <tr>
               <td class="w-25">
                 <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
@@ -420,11 +561,8 @@
         </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="js/jquery-min.js"></script>
-    <script type="text/javascript">
-      function toggle_visibility(id) {
-        var e = document.getElementById(id);
-        e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-      }
-    </script>
+    <script src="js/jquery-cookie.js"></script>
+    <script src="js/orderInf.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>

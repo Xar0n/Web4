@@ -28,3 +28,18 @@ td, th {
 #cartModal .modal-footer {
   padding-top: 0rem;
 }
+
+#enscart_my_counter_wrapper {
+    cursor: pointer;
+    min-width: 30px;
+    height: 30px;
+    background-color: #d62240;
+    color: #fff;
+    border-radius: 30px;
+    position: absolute;
+    text-align: center;
+    line-height: 30px;
+    font-family: Arial,sans-serif;
+    margin: -62px 40px;
+    z-index: 1150;
+}
