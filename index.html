@@ -62,26 +62,38 @@
       </ul>
 	<!--  -->
       <form class="d-flex" >
-        <div class="form-check form-check-inline">
+         <div class="btn-group col">
+        <div class="form-check form-check-inline me-2 check">
           <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" onclick="toggle_visibility('filter')">
           <label class="form-check-label" for="inlineCheckbox1" style="color:white">Фильтры</label>
         </div>
-        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+        
+            <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+        
 		    <button type="button" class="btn btn-primary">Найти</button>
+         </div>
       </form>
     </div>
 
 
     <div style="display:none" id="filter">
     <form class="d-flex">
-        <div class="form-check form-check-inline">
+        <div class="btn-group"> 
+            <label class="col-form-label me-2" style="color:white">Цена</label>
+	    	<input type="number" class="form-control me-2" placeholder="От" aria-label="Search" min="0">
+		    <input type="number" class="form-control me-2" placeholder="До" aria-label="Search" min="0">
+		    <label class="col-form-label me-2" style="color:white">Издательство</label>
+		    <input class="form-control me-2" type="search" placeholder="Название" aria-label="Search">
+        <div class="form-check form-check-inline me-2 check">
           <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
           <label class="form-check-label" for="inlineCheckbox2" style="color:white">Скидка</label>
         </div>
-		<div class="form-check form-check-inline">
+		    <div class="form-check form-check-inline check">
           <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
           <label class="form-check-label" for="inlineCheckbox" style="color:white">Наличие</label>
         </div>
+        </div>
+        
 		<!-- 
 			Поиск и email
         <input class="form-control" type="search" placeholder="Поиск" aria-label="Search">
@@ -89,12 +101,7 @@
         <input type="text" class="form-control" id="staticEmail">-->
 
 		<!-- если поставить type search при вводе текста, справа появляется крестик, которым можно убрать всё что написал, в type text и number такого нет-->
-		<label class="col-form-label" style="color:white">Цена</label>
-		<input type="number" class="form-control" placeholder="От" aria-label="Search">
-		<input type="number" class="form-control" placeholder="До" aria-label="Search">
-
-		<label class="col-form-label" style="color:white">Издательство</label>
-		<input class="form-control" type="search" placeholder="Название" aria-label="Search">
+		
     </form>
     </div>
   </div>
@@ -123,7 +130,9 @@
                 <p class="product-price2">800 ₽</p>
                 </div>
                 <div class="col add-to-cart">
-				<button type="button" class="btn btn-primary button-buy">В корзину</button>
+                <input type="hidden" name="hidden_title" id="title1" value="Планета людей">
+                <input type="hidden" name="hidden_price" id="price1" value="800">
+				        <button type="button" name="add_cart" id="1" class="btn btn-primary button-buy">В корзину</button>
                 </div>
             </div>
 			</div>
@@ -384,7 +393,7 @@
           <thead>
             <tr>
               <th scope="col"></th>
-              <th scope="col">Название</th>
+              <th scope="col">Автор и название</th>
               <th scope="col">Цена</th>
               <th scope="col">Количество</th>
               <th scope="col">Всего</th>
@@ -394,162 +403,68 @@
           <tbody id="product-list">
             <tr>
               <td class="w-25">
-                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+                <img src="img/planet_of_people.png" class="img-fluid img-thumbnail" alt="Sheep">
               </td>
-              <td>Vans Sk8-Hi MTE Shoes</td>
-              <td>89$</td>
-              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-              <td>178$</td>
+              <td>Антуан де Сент-Экзюпери, Планета людей</td>
+              <td>800 Р</td>
+              <td class="qty"><input type="number" class="form-control" id="input1" value="1" required min="1" max="100"></td>
+              <td>800 Р</td>
               <td>
                 <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
                 </a>
               </td>
             </tr>
             <tr>
               <td class="w-25">
-                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+                <img src="img/planet_of_people.png" class="img-fluid img-thumbnail" alt="Sheep">
               </td>
-              <td>Vans Sk8-Hi MTE Shoes</td>
-              <td>89$</td>
-              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-              <td>178$</td>
+              <td>Антуан де Сент-Экзюпери, Планета людей</td>
+              <td>800 Р</td>
+              <td class="qty"><input type="number" class="form-control" id="input1" value="1" required min="1" max="100"></td>
+              <td>800 Р</td>
               <td>
                 <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
                 </a>
               </td>
             </tr>
             <tr>
               <td class="w-25">
-                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+                <img src="img/planet_of_people.png" class="img-fluid img-thumbnail" alt="Sheep">
               </td>
-              <td>Vans Sk8-Hi MTE Shoes</td>
-              <td>89$</td>
-              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-              <td>178$</td>
+              <td>Антуан де Сент-Экзюпери, Планета людей</td>
+              <td>800 Р</td>
+              <td class="qty"><input type="number" class="form-control" id="input1" value="1" required min="1" max="100"></td>
+              <td>800 Р</td>
               <td>
                 <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
                 </a>
               </td>
             </tr>
             <tr>
               <td class="w-25">
-                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+                <img src="img/planet_of_people.png" class="img-fluid img-thumbnail" alt="Sheep">
               </td>
-              <td>Vans Sk8-Hi MTE Shoes</td>
-              <td>89$</td>
-              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-              <td>178$</td>
+              <td>Антуан де Сент-Экзюпери, Планета людей</td>
+              <td>800 Р</td>
+              <td class="qty"><input type="number" class="form-control" id="input1" value="1" required min="1" max="100"></td>
+              <td>800 Р</td>
               <td>
                 <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="w-25">
-                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
-              </td>
-              <td>Vans Sk8-Hi MTE Shoes</td>
-              <td>89$</td>
-              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-              <td>178$</td>
-              <td>
-                <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="w-25">
-                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
-              </td>
-              <td>Vans Sk8-Hi MTE Shoes</td>
-              <td>89$</td>
-              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-              <td>178$</td>
-              <td>
-                <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="w-25">
-                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
-              </td>
-              <td>Vans Sk8-Hi MTE Shoes</td>
-              <td>89$</td>
-              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-              <td>178$</td>
-              <td>
-                <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="w-25">
-                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
-              </td>
-              <td>Vans Sk8-Hi MTE Shoes</td>
-              <td>89$</td>
-              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-              <td>178$</td>
-              <td>
-                <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="w-25">
-                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
-              </td>
-              <td>Vans Sk8-Hi MTE Shoes</td>
-              <td>89$</td>
-              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-              <td>178$</td>
-              <td>
-                <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="w-25">
-                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
-              </td>
-              <td>Vans Sk8-Hi MTE Shoes</td>
-              <td>89$</td>
-              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-              <td>178$</td>
-              <td>
-                <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="w-25">
-                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
-              </td>
-              <td>Vans Sk8-Hi MTE Shoes</td>
-              <td>89$</td>
-              <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-              <td>178$</td>
-              <td>
-                <a href="#" class="btn btn-danger btn-sm">
-                  <i class="fa fa-times"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
                 </a>
               </td>
             </tr>
           </tbody>
         </table> 
         <div class="d-flex justify-content-end">
-          <h5>Конечная стоимость: <span class="price text-success">89$</span></h5>
+          <h5>Конечная стоимость: <span class="price text-success">1600 Р</span></h5>
         </div>
       </div>
       <div class="modal-footer border-top-0 d-flex justify-content-between">
