@@ -145,3 +145,32 @@ a{
   line-height: 19px;
   padding: 10px 16px;
 }
+
+.block_title_page {
+  padding: 32px 0px;
+}
+
+.title_page {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+}
+
+.img_series {
+    max-width: 160px;
+  	max-height: 240px;
+}
+
+.title_series {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
