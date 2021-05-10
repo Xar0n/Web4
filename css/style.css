@@ -164,13 +164,22 @@ a{
   	max-height: 240px;
 }
 
+.blockTitle_series {
+  max-height: 240px;
+  vertical-align: middle;
+  text-align: center;
+  
+}
+
 .title_series {
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  margin-left: -0.35em;
+}
+
+.block_series {
+  margin-bottom: 64px;
 }
