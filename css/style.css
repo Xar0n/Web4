@@ -74,9 +74,8 @@
 
 .block {
 	background: #DEE2E6;
-	text-align: center;
-	margin-top: 64px;
-	margin-bottom: 64px;
+	text-align: center;	
+	margin-top: 50px;
 	margin-left: 10px;
 	margin-right: 10px;
 }
@@ -209,12 +208,29 @@ a {
 .img_page_min {
 	width: 100%;
 	height: auto;
+  cursor: pointer;
 }
 
 .a_page {
 	margin-bottom: 24px;
 }
 
-.inf_page {
-	
+.price_page {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 39px;
+
+/* identical to box height */
+  display: flex;
+  align-items: center;
+}
+
+.description_page {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
 }
